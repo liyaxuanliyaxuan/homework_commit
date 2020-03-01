@@ -1,0 +1,214 @@
+
+.mainContentBg{
+    width: 100%;
+    height:  920px;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content: center;
+}
+
+.mainPage{
+    width: 1038px;
+    height:  920px;
+}
+
+.mainContent{
+    position: relative;
+    top: 25px;
+    width: 1038px;
+    height: 530px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.mainContentLogo{
+    display: block;
+    position: relative;
+    top: 34px;
+    margin: 0 auto;
+    width: 283px;
+    height: 66px;
+}
+
+.mainContentTitle{
+    position: relative;
+    top: 46px;
+    width: 620px;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #928f8f ;
+}
+
+.mainContentTitleLine{
+    display: inline-block;
+    margin: 0 15px 0;
+    width: 125px;
+    height: 3px;
+    background: url(./images/logo_big-line.png) no-repeat;
+    vertical-align: middle;
+}
+
+.mainContentBanner{
+    position: relative;
+    top: 70px;
+    width: 995px;
+    height: 414px;
+    margin: 0 auto;
+}
+
+.mainContentBannerImg{
+    border-radius: 20px;
+    width: 995px;
+    height: 348px;
+}
+
+.mainContentBannerSpot{
+    position: absolute;
+    top: 370px;
+}
+.mainContentBannerSpot li{
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    color: #b6a38f;
+}
+.mainContentBannerSpotActive{
+    color: #ffffff;
+}
+
+
+/* // MainPage 第二部分
+
+// 总体样式 */
+.mainList{
+    position: relative;
+    top: 20px;
+    width: 1038px;
+    height: 320px;
+}
+
+.mainListAbout,.mainListNews{
+    display: inline-block;
+    width:512px;
+    height:312px;
+}
+
+
+/* // 左边部分样式 */
+
+.mainListAbout{
+    background-color:#70cbf4;
+    border-radius: 2px ;
+    color: #ffffff;
+}
+
+
+.mainListAboutContent{
+    width: 465px;
+    height: 245px;
+}
+
+.mainListAboutTitle{
+    font-size: 15px;
+    position: relative;
+    top: 24px;
+    left: 24px;
+}
+
+.mainListAboutList {
+    position: relative;
+    top: 50px;
+    left: 24px;
+    width: 465px;
+    height: 220px;
+    
+    
+}
+
+.mainListAboutListLi{
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 9px;
+    margin-bottom: 23px;
+    height: auto;
+    width: 465px;
+    border-bottom:1px solid  #ffffff;
+    display: flex;
+    align-items: flex-start;
+}
+
+.mainListAboutListImg{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.mainListAboutListSpan{
+    display: inline-block;
+    margin-left: 6px;
+    height: auto;
+    width: 439px;
+}
+
+
+/* //右边部分样式 */
+
+.mainListNews{
+    background-color:#aec9d3;
+    border-radius: 2px ;
+    color: #ffffff;
+    position: relative;
+    left: 14px;
+}
+
+
+.mainListNewsContent{
+    width: 465px;
+    height: 245px;
+}
+
+.mainListNewsTitle{
+    font-size: 15px;
+    position: relative;
+    top: 24px;
+    left: 24px;
+}
+.mainListNewsList {
+    position: relative;
+    top: 50px;
+    left: 24px;
+    width: 465px;
+    height: 220px;
+}
+
+
+.mainListNewsListLi{
+    display: block;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 9px;
+    margin-bottom: 23px;
+    height: auto;
+    width: 465px;
+    border-bottom:1px solid  #ffffff;
+    display: flex;
+    align-items: flex-start;
+}
+.mainListNewsListImg{
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+.mainListNewsListSpan{
+    display: inline-block;
+    margin-left: 6px;
+    height: auto;
+    width: 439px;
+}
+
+
+
+

@@ -1,0 +1,149 @@
+.left-nav{
+    margin-right:16px;
+    width: 336px;
+    
+    
+}
+.resource-content{
+    margin: 0 auto;
+    width: 1265px;
+    display: flex;
+
+   
+}
+.nav-item{
+    font-size:20px;
+    font-family:"微软雅黑";
+    padding-left:40px;
+    color: #282828;
+    width: 334px;
+    height: 52px;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+  
+    background:url('../../assets/imgs/圆角矩形4.png') no-repeat;
+}
+.nav-item--active{
+    position: relative;
+    font-size: 22px;
+    color: #ffffff;
+    background: url('../../assets//imgs//选中蓝条.png') no-repeat;
+    font-family: "微软雅黑";
+    padding-left: 40px;
+    width:334px;
+    height: 52px;
+    flex-direction: column  ;
+    display: flex;
+    justify-content: center;
+}
+.right-content{
+    width:907px;
+    background: url('../../assets/imgs/右bg.png') repeat-x;
+
+}
+.right-top{
+    height: 122px;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left:56px;
+    position: relative;
+
+}
+.search-icon{
+    margin-right: 20px;
+}
+.teacher-list{
+    
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    
+    width: 100%;
+   
+    
+}
+.teacher-item{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    margin-top: 40px;
+   margin-left: 68px;
+   width: 817px;
+  
+    height: 123px;
+    background: url("../../assets//imgs/圆角矩形bg.png") no-repeat;
+    
+}
+.teacher-icon{
+    margin-left: -35px;
+   
+    
+
+}
+.teacher-content{ 
+    box-sizing: border-box;
+    height: 100%;
+    width: 75%;
+    padding: 20px 0;
+    justify-content: space-between;
+    margin-left:8px;
+    display: flex;
+    flex-direction: column;
+    color:#4f5054;
+    font-size: 20px;
+
+    
+
+}
+.search-line{
+    position: absolute;
+    bottom:0;
+
+}
+.search-tip-txt{
+    color:#3a3d3f;
+    font-size:20px;
+}
+.teacher-content img{
+    margin-right:6px;
+}
+.teacher-content span{
+    margin-left: 14px;
+}
+.teacher-content-dot{
+ 
+
+}
+.dot-1{
+  position: absolute;
+ top:22px;
+   
+    right:40px ;
+  
+}
+.dot-2{
+    position: absolute;
+    top:22px;
+      
+    right:56px;
+    
+
+
+
+}
+.dot-3{
+    position: absolute;
+    top:22px;
+      
+right:72px;
+
+}
+.arrow{
+  display: inline-block;
+  width:20px;
+  position: absolute;
+  left: 266px;
+}
