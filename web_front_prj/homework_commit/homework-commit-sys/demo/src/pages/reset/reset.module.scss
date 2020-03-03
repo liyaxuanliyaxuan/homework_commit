@@ -1,6 +1,5 @@
 
-
-.loginPage{
+.resetPage{
     width: 100%;
     height: 720px;
     background-image: url(../../static/img/loginPageBg.png);
@@ -13,9 +12,9 @@
     align-items: center;
 }
 
-.loginContent{
+.resetContent{
     width: 404px;
-    height: 436px;
+    height: 553px;
     margin: 0 auto;
 }
 
@@ -31,10 +30,10 @@
     height: 65px;
 }
 
-.loginForm{
+.resetForm{
     margin-top: 30px;
     width: 404px;
-    height: 305px;
+    height: 453px;
     background-color: #ffffff;
     border-radius: 3px ;
     border: 1px solid  #bfe3f1;
@@ -42,8 +41,9 @@
 
 .formListTitle{
     height: 65px;
+    line-height: 65px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 } 
 
 .formListTitleActive{
@@ -51,7 +51,7 @@
 }
 
 
-.loginBtn,.registerBtn{
+.resetBtn{
     color:#040404;
     font-size:16px;
     width: 95px;
@@ -63,7 +63,7 @@
 
 .inputArea{
     width: 356px;
-    height: 188px;
+    height: 308px;
     position: relative;
     left: 24px;
 }
@@ -87,32 +87,37 @@
     border-bottom: 1px solid #dddddd;
 }
 
-
-
-.inputReset{
-    margin-top: 23px;
-    width: 90px;
-    height: 20px;
-    position: relative;
-    left: 274px;
+.inputBoxComfirmCode{
+    margin-left: 15px;
+    width: 276px;
+    height: 24px;
+    border-bottom: 1px solid #dddddd;
 }
 
-.resetBtn{
-    display: inline-block;
-    color: #040404;
-    font-size: 14px;
-    width: 90px;
-    height: 20px;
-    line-height: 20px;
+
+.inputBoxFindByEmail{
+    margin-left: 15px;
+    width: 276px;
+    height: 24px;
+    border-bottom: 1px solid #dddddd;
 }
 
-.resetBtnIcon{
+.codeBox{
+    margin-left: 15px;
+    width: 195px;
+    height: 24px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.requireCodeBtn{
     display: inline-block;
-    width: 14px;
-    height: 15px;
     position: relative;
-    top: 3px;
-    margin-left: 5px;
+    left: 5px ;
+    width: 94px;
+    height: 32px;
+    border-radius: 3px;
+    color: #ffffff;
+    background-color:#f8b551;
 }
 
 
@@ -124,10 +129,11 @@
     /* background-color: transparent; */
     background-color: #00b7ee;
     position: relative;
-    top:20px;
+    top:45px;
     width:356px;
     height: 37px;
     text-align: center;
     margin-top: 10px;
     border-radius: 3px;
 }
+

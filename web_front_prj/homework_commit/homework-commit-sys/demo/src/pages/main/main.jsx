@@ -5,7 +5,7 @@ import { Route, Switch, Link} from 'react-router-dom'
 
 import Home from '../homepage/homepage'
 import NotFound from '../not-found/not-found'
-import schoolwork from '../schoolwork/schoolwork'
+import Question from '../question/question'
 import Resource from '../resource/resource'
 import Personal from '../personal/personal'
 
@@ -21,7 +21,7 @@ class Main extends Component {
                 <Route exact path='/index' component={Home}></Route>
                 <Route path='/index/personal' component={Personal}></Route>
                 <Route path='/index/resource' component={Resource}></Route>
-                <Route path='/index/schoolwork' component={schoolwork}></Route>
+                <Route path='/index/question' component={Question}></Route>
                 <Route component={NotFound}></Route>
                 </Switch>
             </div>

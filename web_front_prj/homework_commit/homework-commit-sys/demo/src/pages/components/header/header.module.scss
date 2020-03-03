@@ -1,0 +1,105 @@
+.navLink{
+    text-decoration: none;
+}
+
+.headerWrapper{
+    background-color: #ffffff;
+    height: 53px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.headerContent{
+    width: 1500px;
+    height: 53px;
+    display: flex;
+    align-items: center;
+}
+
+.icon{
+    display: inline-block;
+    width: 195px;
+    height: 45px;
+}
+
+.iconImg{
+    width: 195px;
+    height: 45px;
+}
+
+
+.jumpLogin{
+    display: inline-block;
+    width: 92px;
+    height: 26px;
+    position: relative;
+    left: 52px;
+}
+
+.loginBtn{
+    width: 90px;
+    height: 24px;
+    border: 1px solid #a8a9ab;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.loginBtn li{
+    display: inline-block;
+    line-height: 24px;
+}
+
+.loginBtnLink{
+    text-decoration: none;
+    font-size: 15px;
+    color: #a8a9ab;
+}
+
+
+.navList{
+    display: inline-block;
+    position: relative;
+    width: 462px;
+    height: 53px;
+    left: 750px;
+}
+
+
+ /* 首页 资源畅吧 论题空间 */
+.navBox{
+    display: inline-block;
+    width: 280x;
+    height: 53px;
+    font-size: 15px;
+}
+
+.navBox li{
+    display: inline-block;
+    height: 53px;
+    width: auto;
+    margin-left: 43px;
+}
+
+.navBoxLinks{
+    color: #4e5054;
+    line-height: 53px;
+}
+
+/* 个人主页 */
+.navPerson{
+    display: inline-block;
+    margin-left: 33px;
+    height: 64px;
+    width: 148px;
+    background: url(../../../static/img/personPage-button.png) no-repeat;
+    background-size: 148px 64px;
+}
+
+.navPersonImg{
+    line-height: 64px;
+    color: #ffffff;
+    font-weight: 600;
+    margin-left: 62px;
+}
+

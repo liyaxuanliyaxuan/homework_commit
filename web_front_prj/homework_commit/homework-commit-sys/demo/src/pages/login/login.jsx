@@ -22,7 +22,7 @@ import React, {Component} from "react";
 // import axios from "axios"
 import {Link} from "react-router-dom";
 import styles from "./login.module.scss";
-import {GlobalStyle} from "../../globalStyle";
+
 
 import store from '../../store/index';
 import logoIcon from '../../static/img/logo.png';
@@ -45,14 +45,14 @@ class LogIn extends Component{
     render(){
         return (
             <div className={styles.loginPage}>
-                <GlobalStyle/>
+             
                 <div className={styles.loginContent}>
                     <div className={styles.logo}>
                         <img src={ logoIcon} className={styles.logoIcon} />
                     </div>
                     <div className={styles.loginForm} >
                         <div className={styles.formListTitle}>
-                            <Link className= { `${styles.loginBtn} ${styles.formListTitleActive}`} to="/login" onClick={this.loginBtn}><span >登录</span></Link>
+                            <Link className= { `${styles.loginBtn} ${styles.formListTitleActive}`} to="/" onClick={this.loginBtn}><span >登录</span></Link>
                             <Link className={styles.registerBtn} to="/register" onClick={this.registerBtn}><span>注册</span></Link>
                         </div>
                         <div class={styles.inputArea}>
