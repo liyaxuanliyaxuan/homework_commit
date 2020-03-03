@@ -1,0 +1,88 @@
+@mixin circle ($size){
+    border-radius: 50%;
+    width:$size;
+    height: $size;
+    display: inline-block;
+    vertical-align: middle;
+    
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+$tip-color : #ffa20d;
+$info-bg-color:#eceff0;
+div.my-answer {
+    position: absolute;
+    margin-top: 1.4375rem;
+    width: 61.125rem;
+    background: $info-bg-color;
+    padding:1rem 1.875rem;
+    height: 8.625rem;
+    div.my-answer-notice {
+        
+      i.my-answer-notice-icon {
+          width:1.5rem ;
+          height: 1rem;
+          display: inline-block;
+          margin-right: 1rem;
+          vertical-align: middle;
+          background: url('../../../static/img/evenlop-icon.png') no-repeat;
+  
+      }
+  
+      span.total-answer {
+  
+        font-size: 0.875rem;
+        color: #4f5054;
+
+      }
+    }
+  
+    div.my-answer-content {
+        display: flex;
+        align-items: center;
+        margin-left: 10%;
+        line-height: 4.75rem;
+      i {
+  
+        @include circle(0.5rem);
+        background: $tip-color;
+        margin-right: 1.2rem;
+        
+      }
+  
+      span.my-answer-content--txt {
+          color:#000000;
+          vertical-align: middle;
+          font-size: 0.9375rem;
+          width: 320px;
+  
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+      }
+    }
+  
+    div.my-answer-button {
+        position: absolute;
+        display: inline-block;
+        right: 2rem;
+        bottom: 1.5rem;
+      span {
+          font-size: 0.875rem;
+          margin-right: 1rem;
+          color: #4f5054;
+  
+      }
+  
+      i {
+          display: inline-block;
+          width: 1.125rem;
+          height: 1.125rem;
+          vertical-align: middle;
+          background: url('../../../static/img/my-class-arr.png') no-repeat;
+  
+      }
+    }
+  }

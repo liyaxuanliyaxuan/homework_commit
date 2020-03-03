@@ -1,0 +1,53 @@
+.navLink{
+    text-decoration: none;
+}
+
+
+.headerWrapper{
+
+   /* background: url('./imgs/headr-bar-bg.png') repeat-x; */
+    background: #ffffff;
+    min-width: 1032px;
+
+}
+.headerContent{
+    margin: 0 auto;
+    /* width:1270px; */
+    position: relative;
+    height: 3.375rem;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: #4e5054;
+
+}
+.icon{
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    left:3.125%;
+    top: 0.125rem;
+}
+
+.navList{
+    display: inline-block;
+    
+    margin-left: 300px;
+   
+   
+}
+.userIcon{
+    display: inline-block;
+    margin-right: 0;
+    position: absolute;
+    right: 0;
+
+}
+.navBox{
+   
+ display: flex;
+justify-content: space-between;
+width: 505px;
+ 
+
+}

@@ -1,0 +1,139 @@
+.personal-poster {
+    width: 64.6875rem;
+    margin: 1rem auto;
+    height: 22.5rem;
+    background: url('./imgs/poster-bg.png') no-repeat;
+    background-size: contain;
+    background-color: #ffffff;
+    position: relative;
+
+}
+
+/* @media (max-width:1240px) {
+    .personal-content {
+        width: ;
+        height:;
+    }
+} */
+
+.user-portrait {
+    position: absolute;
+
+    border-radius: 50%;
+    left: 2.5rem;
+    bottom: 1.25rem;
+    border: #ffffff solid 4px;
+  
+
+}
+.user-portrait img{
+    
+        width:138px;
+        height:138px;
+    
+}
+
+.user-info-simple {
+    position: absolute;
+    bottom: 1.25rem;
+    left: 12.375rem;
+}
+
+.personal-user-name {
+
+    color: #ffffff;
+    font-size: 1.75rem;
+    position: absolute;
+    top: -3.9rem;
+
+}
+
+.personal-user-info-simple {
+    color: #282828;
+    font-size: 0.875rem;
+    font-family: '微软雅黑';
+    width: 16.625rem;
+    display: flex;
+    justify-items: left;
+}
+
+.personal-user-info-simple p {
+    line-height: 1.75;
+}
+
+.info-simple-row {
+    width: 50%;
+}
+
+.personal-user-info-simple p span {}
+
+.user-spread {
+    position: absolute;
+    display: inline-flex;
+    justify-content: space-between;
+    width: 2.375rem;
+    height: 12px;
+    bottom: 7.4rem;
+    right: 1.25rem;
+    cursor: pointer;
+}
+
+.user-spread i {
+    display: inline-block;
+    width: 0.4rem;
+    height: 0.4rem;
+    background-color: #ffffff;
+    border-radius: 50%;
+}
+
+.user-spread i::before {}
+
+.personal-bottom {
+    width: 64.6875rem;
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding-left: 1.375rem;
+    padding-right: 1.375rem;
+    padding-bottom: 10rem;
+    height: 40rem;
+    position: relative;
+}
+
+.personal-bottom nav {
+    color: #282828;
+    font-size: 0.9375rem;
+    line-height: 3.625;
+    border-bottom: 2px solid #f6f6f6;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 24.0625rem;
+}
+
+.add-class {
+    border: 0.1rem solid #85ddf7;
+    border-radius: 0.3rem;
+    background-color: transparent;
+    color: #85ddf7;
+    font-size: 0.8125rem;
+    line-height: 2;
+    text-align: center;
+    width: 6.375rem;
+    position: absolute;
+    right: 1.75rem;
+
+    top: 1rem;
+}
+
+.personal-nav-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.personal-nav-item--active {
+    
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-weight: bold;
+    color: #282828;
+    border-bottom: #ffa20d 2px solid;
+}

@@ -1,0 +1,127 @@
+@mixin circle ($size) {
+  border-radius: 50%;
+  width: $size;
+  height: $size;
+  display: inline-block;
+  vertical-align: middle;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+$tip-color : #ffa20d;
+$info-bg-color:#eceff0;
+
+div.my-info {
+  position: absolute;
+  margin-top: 1.4375rem;
+  width: 61.125rem;
+  height: 320px;
+  background: $info-bg-color;
+  
+
+  div.my-info-left {
+    width: 17.1779%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+
+    div.my-info-portrait {
+      display: inline-block;
+      border-radius: 50%;
+      margin-top: 2.125rem;
+      margin-right: 2.125rem;
+      width: 106px;
+      height: 106px;
+      border: #ffffff solid 4px;
+      display: flex;
+      align-items: center;
+      margin-left: 2.125rem;
+
+      img {
+        width: 98px;
+        height: 98px;
+      }
+    }
+    span.upload-pic{
+
+      display: flex;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      position: absolute;
+      right: 30px;
+      bottom: 15px;
+    }
+    span.my-info-user-name{
+
+      margin-left: 64px;
+      color: #4f5054;
+      font-weight: bold;
+
+font-size: 15px;    }
+  }
+
+  div.my-info-more-info {
+    width: 82.8221%;
+    display: inline-block;
+    color: #4f5054;
+    padding-top: 2.375rem;
+    padding-bottom: 2.375rem;
+    padding-right: 3.125rem;
+    font-size: 0.875rem;
+
+    p.my-info-main-info {
+      line-height: 3.25rem;
+
+
+
+      span {
+        display: inline-block;
+        width: 28.157%;
+
+        i {
+          background: $tip-color;
+          margin-right: 1.2rem;
+
+          @include circle(0.5rem);
+
+        }
+
+        span {
+          color: #4f5054;
+          font-weight: bold;
+        }
+      }
+    }
+
+    p.my-info-other-msg {
+      line-height: 3.25rem;
+
+      span {
+        color: #4f5054;
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 1.2rem;
+
+      }
+
+      i.edit {
+        width: 1.25rem;
+        height: 1.25rem;
+        display: inline-block;
+        background: url('../../../static/img/edit.png') no-repeat;
+        margin-left: 3.875rem;
+        vertical-align: middle;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.my-info-more-info p {
+  border-bottom: #fff solid 2px;
+}

@@ -1,0 +1,41 @@
+.left-nav{
+    position: absolute;
+    left:0;
+    width: 22.222%;
+}
+
+.nav-item,.nav-item--active{
+    font-size:0.875rem;
+    font-family:"微软雅黑";
+    color: #282828;
+    width: 100%;
+    height: 2.75rem;
+    border-radius: 6px;
+    margin-bottom: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 26px;
+    background:#ffffff;
+  
+}
+.nav-item:hover{
+    cursor: pointer;
+}
+.nav-item--active{
+    color: #ffffff;
+    background: #7ecef4;
+    font-size: 0.9375rem;
+
+}
+.left-nav li:nth-child(5n){
+    margin-bottom: 0.875rem;
+}
+.arrow{
+
+  position: absolute;
+  right: 1rem;
+ 
+}
+
+
