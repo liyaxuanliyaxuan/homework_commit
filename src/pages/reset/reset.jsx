@@ -21,7 +21,7 @@ class Reset extends Component{
                     </div>
                     <div className={styles.resetForm } >
                         <div className={styles.formListTitle}>
-                            <Link className= { `${styles.resetBtn} ${styles.formListTitleActive}`} to="../login" ><span>重置密码</span></Link>
+                            <Link className= { `${styles.resetBtn} ${styles.formListTitleActive}`} to="../reset" ><span>重置密码</span></Link>
                         </div>
                         <div class={styles.inputArea}>
                             <div className={styles.inputItem}>

@@ -32,13 +32,13 @@ class Register extends Component{
                     </div>
                     <div className={styles.registerForm } >
                         <div className={styles.formListTitle}>
-                            <Link className= { styles.loginBtn } to="../login" onClick={this.loginBtn}><span >登录</span></Link>
+                            <Link className= { styles.loginBtn } to="../login" onClick={this.loginBtn}><span>登录</span></Link>
                             <Link className={ `${styles.registerBtn} ${styles.formListTitleActive}`} to="../register" onClick={this.registerBtn}><span>注册</span></Link>
                         </div>
                         <div class={styles.inputArea}>
                             <div className={styles.inputItem}>
                                 <span className={styles.inputTip}>姓名</span>
-                                <input onChange={this.changeInputValue}className={styles.inputBox} data-type="name"/>
+                                <input onChange={this.changeInputValue} className = {styles.inputBoxName} data-type="name" />
                             </div>
                             <div className={styles.inputItem}>
                                 <span className={styles.inputTip}>密码</span>
@@ -83,7 +83,7 @@ class Register extends Component{
                             <button type="button" onClick={this.clickBtn}
                                 title="submit"  dataU='hhh'
                                 className={styles.confirmBtn}>
-                                登录
+                                确定
                             </button>
                         </div>
                     </div>

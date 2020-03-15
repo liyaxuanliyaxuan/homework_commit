@@ -1,0 +1,72 @@
+
+.PutQustionDiv{
+    position: absolute;
+    left: 258px;
+    top: 156px;
+    width: 596px;
+    height: 234px;
+    z-index: 100;
+    background-color: #ffffff;
+    div{
+        display: block;
+    }
+}
+
+.closeIconSty{
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.PutQustionForm{
+    width: 554px;
+    height: 200px;
+    font-size: 14px;
+    position: absolute;
+    left: 18px;
+    top: 26px;
+    color: #515254;
+    div{
+        width: 554px;
+        height: auto;
+        margin-bottom: 14px;
+    }
+    input{
+        display: inline-block;
+        margin-left: 8px;
+        width: 476px;
+        height: 22px;
+        border-bottom: 1px solid #dddddd;
+        padding-left: 2px;
+    }
+    textarea{
+        display: inline-block;
+        margin-left: 8px;
+        width: 476px;
+        height: 66px;
+        vertical-align: top;
+        border: 1px solid #dddddd;
+        padding: 2px 4px 2px;
+    }
+}
+
+.descriptinText{
+    margin-top: 24px;
+}
+
+.submitBtn{
+    position: relative;
+    left: 365px;
+    width: 190px;
+    height: 28px;
+    background-color: #7ecef4;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 2px;
+    font-weight: 600;
+}

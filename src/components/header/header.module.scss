@@ -62,7 +62,7 @@
     position: relative;
     width: 462px;
     height: 53px;
-    left: 750px;
+    left: 760px;
 }
 
 
@@ -70,26 +70,28 @@
 .navBox{
     display: inline-block;
     width: 280x;
-    height: 53px;
+    height: 43px;
     font-size: 15px;
 }
 
 .navBox li{
     display: inline-block;
-    height: 53px;
+    height: 43px;
     width: auto;
     margin-left: 43px;
 }
 
 .navBoxLinks{
+    display: inline-block;
     color: #4e5054;
-    line-height: 53px;
+    height: 40px;
+    line-height: 40px;
 }
 
 /* 个人主页 */
 .navPerson{
     display: inline-block;
-    margin-left: 33px;
+    margin-left: 30px;
     height: 64px;
     width: 148px;
     background: url(../../assets/imgs/personPage-button.png) no-repeat;
@@ -103,3 +105,11 @@
     margin-left: 62px;
 }
 
+// active
+.navBoxLinksActive{
+    font-size: 15px;
+    color: #282828;
+    border-bottom: 3px solid #00b7ee;
+    font-weight: 600;
+    letter-spacing: 1px;
+}

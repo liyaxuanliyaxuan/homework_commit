@@ -1,5 +1,5 @@
 import React , { Component } from "react"
-import { Link } from 'react-router-dom'
+import { NavLink , Link} from 'react-router-dom'
 
 import styles from './header.module.scss'
 import headerLogo from '../../assets/imgs/logoMainPage.png'
@@ -36,18 +36,18 @@ export default class HeaderBar extends Component{
                         {this.state.navList.map(item => {
                             return (
                                     <li key={item.title} >
-                                        <Link to={'/'+item.url} className={styles.navBoxLinks}>
+                                        <NavLink to={'/'+item.url} className={styles.navBoxLinks} activeClassName = {styles.navBoxLinksActive}>
                                             {item.title}
-                                        </Link>
+                                        </NavLink>
                                     </li>
                                 )
                         })}
                     </ul>
                     <ul className={styles.navPerson}>
                         <li>
-                            <Link to = '/personal' className={styles.navPersonImg} >
+                            <NavLink to = '/personal' className={styles.navPersonImg} >
                                 个人主页
-                            </Link>
+                            </NavLink>
                         </li>
                     </ul>
                     
