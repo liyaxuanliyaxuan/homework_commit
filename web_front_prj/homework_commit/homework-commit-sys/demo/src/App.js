@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {  BrowserRouter } from 'react-router-dom'
-import { Provider } from 'react-redux'
+//import { Provider } from 'react-redux'
 // import configStore from './store'
 
 import  Index  from './pages/index/index';

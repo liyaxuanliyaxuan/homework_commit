@@ -36,10 +36,6 @@ export default function TeacherItem(props) {
                 <li><i></i><Link to='/index/resource/downloads'>资源查看</Link></li>
             </ul>     
         </div>
-        <div className='test'>
-
-        </div>
-
     </div>)
 
 }
