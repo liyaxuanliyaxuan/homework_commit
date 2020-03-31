@@ -3,7 +3,7 @@ import Axios from 'axios'
 import qs from 'qs'
 
 import {Component} from 'react'
-//Axios.defaults.baseURL = 'http://localhost:3000/api'
+Axios.defaults.baseURL = 'http://localhost:3000/api'
 if(window.localStorage.getItem('token')){
   Axios.defaults.headers.common['token'] =  window.localStorage.getItem('token')
 }

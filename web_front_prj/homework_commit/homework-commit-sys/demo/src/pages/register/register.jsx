@@ -1,45 +1,39 @@
-// import React, { Component } from "react";
 
-// import { Route, Link } from 'react-router-dom'
-
-
-
-// class Register extends Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {  }
-//     }
-//     render() { 
-//         return (
-//         <Route path='/register'>
-//             register
-//             <Link to='/'>注册成功，点击登录</Link>
-//             </Route>);
-//     }
-// }
- 
-// export default Register;
 import React, {Component} from 'react'
 
 
 import {Link}from "react-router-dom"
-import store from '../../store/index'
+
 
 import styles from "./register.module.scss"
 import logoIcon from '../../static/img/logo.png';
 
+import sendRegisterForm from './sendUserRegisterForm'
+import sendGetCode from './sendGetCode'
+
+import { send } from 'q';
 
 class Register extends Component{
   
     constructor(props){
         super(props)  
-        this.state = store.getState()
+        this.state = {
+            username:'',
+            useremail:'',
+            password:'',
+            reinputpass:'',
+            college:'通信与信息工程学院',
+            code:'' 
+        }
+ 
         this.changeInputValue = this.changeInputValue.bind(this)
         this.clickBtn = this.clickBtn.bind(this)
-        this.storeChange = this.storeChange.bind(this)  //转变this指向
-        store.subscribe(this.storeChange)
+        this.handleGetCode = this.handleGetCode.bind(this)
+        
+    
     }
     render(){
+        const { username, password, reinputpass, useremail, college, code} = {...this.state}
         return (
             <div className={styles.registerPage}>
               
@@ -55,20 +49,38 @@ class Register extends Component{
                         <div class={styles.inputArea}>
                             <div className={styles.inputItem}>
                                 <span className={styles.inputTip}>姓名</span>
-                                <input onChange={this.changeInputValue}className={styles.inputBox} data-type="name"/>
+                                <input 
+                                
+                                value = {username}
+                                onChange={this.changeInputValue}
+                                className={styles.inputBox} 
+                                data-type="username"/>
                             </div>
                             <div className={styles.inputItem}>
                                 <span className={styles.inputTip}>密码</span>
-                                <input onChange={this.changeInputValue} className={styles.inputBox} data-type="password"/>
+                                <input 
+                                type='password'
+                                value = {password}
+                                onChange={this.changeInputValue} 
+                                className={styles.inputBox} 
+                                data-type="password"/>
                             </div>
                             <div className={styles.inputItem}>
                                 <span className={styles.inputTip}> 确认密码</span>
-                                <input onChange={this.changeInputValue} className={styles.inputBoxComfirmCode} data-type="password"/>
+                                <input 
+                                type = 'password'
+                                value = {reinputpass}
+                                onChange={this.changeInputValue} 
+                                className={styles.inputBoxComfirmCode} data-type="reinputpass"/>
                             </div>
                             <div className={styles.inputItem}>
                                 <span className={styles.inputTip}>学院</span>
                                 <div className={styles.selectDiv}>
-                                    <select className={styles.selectBox}>
+                                    <select
+                                    onChange = {this.changeInputValue}
+                                    value = {college} 
+                                    data-type='college'
+                                    className={styles.selectBox}>
                                         <option>通信与信息工程学院</option>
                                         <option>光电工程学院/国际半导体学院</option>
                                         <option>经济管理学院</option>
@@ -90,17 +102,27 @@ class Register extends Component{
                             </div>
                             <div className={styles.inputItem}>
                                 <span className={styles.inputTip}>邮箱</span>
-                                <input onChange={this.changeInputValue} className={styles.inputBox} data-type="email"/>
+                                <input 
+                                value = {useremail}
+                                onChange={this.changeInputValue} 
+                                className={styles.inputBox} data-type="useremail"/>
                             </div>
                             <div className={styles.inputItem}>
                                 <span className={styles.inputTip}>验证码</span>
-                                <input onChange={this.changeInputValue} className={styles.codeBox} data-type="password"/>
-                                <button  className={styles.requireCodeBtn}>获取验证码</button>
+                                <input 
+                                value = {code}
+                                onChange={this.changeInputValue} 
+                                className={styles.codeBox} 
+                                data-type="code"/>
+                                <button
+                                onClick = {this.handleGetCode}  
+                                className={styles.requireCodeBtn}>获取验证码</button>
                             </div>
-                            <button type="button" onClick={this.clickBtn}
-                                title="submit"  dataU='hhh'
+                            <button type="button" 
+                                onClick={this.clickBtn}
+                                title="submit"  
                                 className={styles.confirmBtn}>
-                                登录
+                                注册
                             </button>
                         </div>
                     </div>
@@ -109,22 +131,23 @@ class Register extends Component{
         )
     }
 
-    storeChange(){
-        this.setState(store.getState())
-    }
+
     clickBtn(){
-        const action = { type:'registerSubmit'}
-        store.dispatch(action)
+   
+        sendRegisterForm(this, `/user/register`)
+
+     }
+     handleGetCode(){
+         sendGetCode(this)
+
      }
     changeInputValue(e){
-        console.log(e.currentTarget.getAttribute("data-type"))
-        const action ={
-            type:'changeInput',
-            detail:e.currentTarget.getAttribute("data-type"),
-         
-            value:e.target.value
-        }
-        store.dispatch(action)
+        //console.log(e.currentTarget.getAttribute("data-type"))
+        let type = e.currentTarget.getAttribute("data-type")
+        this.setState({
+            [type]:e.target.value
+        })
+    
 
     }
 }

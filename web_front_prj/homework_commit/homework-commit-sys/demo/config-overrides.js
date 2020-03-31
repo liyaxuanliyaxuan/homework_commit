@@ -8,8 +8,8 @@
     compress: true,
     proxy: {
       '/api': {
-        target:'http://39.105.232.155:8081',
-        //  target: 'http://120.24.93.68:8081',
+        //target:'http://39.105.232.155:8081',
+         target: 'http://120.24.93.68:8085',
         // target:'http://localhost:3003',
         changeOrigin: true,
         pathRewrite: {

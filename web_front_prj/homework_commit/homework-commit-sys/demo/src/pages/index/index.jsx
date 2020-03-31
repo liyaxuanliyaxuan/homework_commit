@@ -4,6 +4,7 @@ import { Route, Switch} from 'react-router-dom'
 
 import Login from '../login/login'
 import Register from '../register/register'
+import Reset from '../reset/reset'
 import Main from '../main/main'
 import NotFound from '../not-found/not-found'
 
@@ -17,6 +18,7 @@ class Index extends Component {
             <Switch>
                 <Route exact path='/' component={Login}/>
                 <Route path='/register' component={Register}/>
+                <Route path='/reset' component={Reset}/>
                 <Route path='/index' component={Main}></Route>
                 <Route  component={NotFound}/>
             </Switch>
