@@ -72,6 +72,7 @@ padding-left: 4.8%;
     font-weight: bold;
 }
 .downloads-title-time{
+    cursor: pointer;
     font-size: 0.875rem;
     color:#4f5054;
     vertical-align: middle;
@@ -140,8 +141,10 @@ padding-left: 4.8%;
 
     content: ' ';
     font-size: 2rem;
+   
 }
-.is-deadline{
+.is-deadline{ 
+    cursor: pointer;
 
 }
 .file-name::before,.homework-name::before{

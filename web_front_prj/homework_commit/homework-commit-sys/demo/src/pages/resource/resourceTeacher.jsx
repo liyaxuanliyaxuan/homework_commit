@@ -11,7 +11,7 @@ import ResourceSearch from './resource-search'
 
 import './resource.css'
 
-class Resource extends Component {
+class ResourceTeacher extends Component {
     constructor(props) {
         super(props);
         this.state = { 
@@ -91,7 +91,7 @@ class Resource extends Component {
                             ifShow={ifShow}
                             showButton={this.showButton}/>
                         </Route>
-                        <Route path='/index/resource/homework:subjectId'>
+                        <Route path='/index/resource/homework'>
                             <HomeWork
                             currentTeacherItem={currentTeacherItem}
                             ifShow={ifShow}
@@ -105,4 +105,4 @@ class Resource extends Component {
     }
 }
  
-export default Resource; 
+export default ResourceTeacher; 

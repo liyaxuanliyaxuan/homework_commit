@@ -20,8 +20,10 @@ export default function TeacherItem(props) {
             height='91'
             src={require('../../../static/img/user-portrait.png')}></img></div>
         <ul className="teacher-content" >
-            <li><img src={require('../../../static/img/name-icon.png')}></img><span>姓名：</span>{teacherInfo.name}</li>
-            <li><img src={require('../../../static/img/class-icon.png')}></img><span>所拥有的班级：</span>{teacherInfo.class.join('、')}</li>
+            <li><img src={require('../../../static/img/name-icon.png')}></img><span>姓名：</span>{ teacherInfo.teacherId}</li>
+            {/* teacherInfo.name */}
+            <li><img src={require('../../../static/img/class-icon.png')}></img><span>所拥有的班级：</span>{ teacherInfo.classcode}</li>
+            {/* teacherInfo.class.join('、')  */}
             <li><img src={require('../../../static/img/subject-icon.png')}></img><span>科目：</span>{teacherInfo.subject}</li>
         </ul>
         <div className='spread-dot'>

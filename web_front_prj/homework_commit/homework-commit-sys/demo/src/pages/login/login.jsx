@@ -1,29 +1,29 @@
 
 import React, {Component} from "react";
-// import axios from "axios"
+
 import {Link} from "react-router-dom";
 import styles from "./login.module.scss";
 
 
+import { message } from 'antd'
+
 import logoIcon from '../../static/img/logo.png';
 import resetArrow from '../../static/img/resetArrow.png' ;
 
-import sendLoginForm from './sendUserLoginForm'
+//import sendLoginForm from './sendUserLoginForm'
 
 
 class LogIn extends Component{
     constructor(props){
         super(props)  
-        
+        console.log(this);
         this.changeInputValue = this.changeInputValue.bind(this)
         this.clickBtn = this.clickBtn.bind(this)
         this.state = {
             useremail:'',
             password:''
         }
-      
-       
-        
+        console.log(this);
     }
 
     render(){
@@ -78,10 +78,53 @@ class LogIn extends Component{
     }
   
     clickBtn(){
-        sendLoginForm(this)
+        
+        //sendLoginForm(this)
+        //判断老师还是学生
+        //存储登录状态
+    const { password, useremail} = {...this.state}
+ 
+
+    if( !password || !useremail){
+        message.error('请完整填写')
+        //return false;
+    }
+    const userData = JSON.stringify(
+        {
+            email:useremail,
+            password
+        }
+    )
+  
+    this.$axios.post(`/login`,userData,
+    {
+        
+        headers: {'Content-Type': 'application/json'}})
+        .then((res) => {
+            console.log(res);
+            if (res.code === 200) {              
+                message.success('登录成功')
+                localStorage.setItem('token',res.data)
+                localStorage.setItem('ifHomeworkLogin',1)
+                //localStorage.setItem('ifTeacher',1)
+                //最好搭配redux
+                //页面跳转
+                window.location.assign('/#/index')
+
+            } else {
+               message.error(res.message) 
+            }
+        }).catch((err) => {
+            message.error(err.message)
+        })
+        window.location.assign('/#/index')
+
      }
+
+
+
     changeInputValue(e){
-        //console.log(e.target.value)
+        
         const type = e.currentTarget.getAttribute("data-type")
         this.setState({
             [type]: e.target.value

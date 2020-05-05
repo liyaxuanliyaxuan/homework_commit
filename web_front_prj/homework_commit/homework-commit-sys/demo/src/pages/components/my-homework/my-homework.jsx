@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import {Link} from 'react-router-dom'
+
 import './my-homework.scss'
 
 class MyHomework extends Component {
@@ -8,6 +10,7 @@ class MyHomework extends Component {
         this.state = {}
     }
     render() {
+        const subjectId = 1//todo
         return (
             <div className='my-homework'>
             <div className='my-homework-teacher-portrait'>
@@ -23,7 +26,7 @@ class MyHomework extends Component {
                 <span className='homework-tip-goto'>去上传</span> */}
                 <span className='homework-tip-if'>已上传</span>
                 <span className='homework-tip-score'>{`成绩:${96}`}</span>
-                <i className='homework-notice-icon'></i>        
+                <Link to={`/index/resource/homework${subjectId}`}><i className='homework-notice-icon'></i></Link>       
             </div>
         </div>
         );

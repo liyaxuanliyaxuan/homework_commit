@@ -21,6 +21,7 @@ class LeftNav extends Component {
         super(props);
         this.state = { 
             currentIndex:0,
+            subjectList:[]
          
          }
         this.subjectList = [
@@ -31,21 +32,31 @@ class LeftNav extends Component {
     }
     componentDidMount(){
         //请求获取学科列表的信息
-        this.setState({
+        const _this = this
+        this.$axios.get('/subject').then(res=>{
+            _this.setState({
+                subjectList:res.data
+            })
+            localStorage.setItem('subjectList',JSON.stringify(res.data))
 
+
+        }).catch(err=>{
+            alert(err)
         })
+      
     }
     render() { 
-        const {teacherList, getTeacherList} = {...this.props}
+        const { getTeacherList} = {...this.props}
+        const { subjectList } = {...this.state}
         return ( 
             <ul className='left-nav'>
-                        {this.subjectList.map((item, index) => {
+                        {subjectList.map((item, index) => {
                             return (
                             <Link to='/index/resource'>   
                             <li 
                             key={index} 
                             onClick={this.getResult.bind(this, index, item, getTeacherList)} 
-                            className={index === this.state.currentIndex ? "nav-item--active" : "nav-item"}>{item}
+                            className={index === this.state.currentIndex ? "nav-item--active" : "nav-item"}>{item.suname}
                                 <Arrow clicked={index === this.state.currentIndex} />
                             </li>
                             </Link>
@@ -56,10 +67,12 @@ class LeftNav extends Component {
     }
     getResult(index, item, callback) {
         //点击时发送请求，请求老师的列表信息
+   
         this.setState({
             currentIndex: index
         })
         // callback(info);
+        callback({item})
    
         console.log(item)
         console.log(index)

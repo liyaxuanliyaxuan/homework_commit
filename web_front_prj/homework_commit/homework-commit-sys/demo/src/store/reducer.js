@@ -53,6 +53,7 @@
 
 
 const defaultStateTwo = {
+    currentTeacherItem:{},
     userName:'小奇',
     studentID:'1234567890',
     password:'123456',
@@ -93,5 +94,14 @@ const defaultStateTwo = {
 }
 
 export default (state = defaultStateTwo ,action) =>{
-    return state
+    let newState = JSON.parse(JSON.stringify(state))
+    switch(action.type){
+        
+        case 'changeTeacherItem':{
+            return newState
+
+        }
+        default: return state
+
+    }
 }

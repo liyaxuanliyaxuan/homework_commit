@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import TeacherItem from '../components/teacherItem/teacherItem'
 import AddClass from './modals/addclass-modal'
-
+//上方展示语句+teacherItem
 function SearchResult(props) {
     // const {searchTeacherList} = {...this.props}
     const {teacherList, currentTeacherItem, pickTeacher} = {...props}
@@ -62,8 +62,8 @@ class ResourceSearch extends Component {
     }
 
     render() {
-        const {teacherList} = {...this.state}
-        // const {teacherList} = {...this.props}
+        //const {teacherList} = {...this.state}
+         const {teacherList} = {...this.props}
         const {currentTeacherItem, pickTeacher} = {...this.props}
         return (
             <SearchResult 

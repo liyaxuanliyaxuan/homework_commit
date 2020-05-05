@@ -9,24 +9,25 @@ class SubmitHomework extends Component {
             visible:false
          }
     }
-    showModal = () => {
-        this.setState({
-          visible: true,
-        });
-      };
+    handleCancel = ()=>{
+
+    }
+
+
     
   
     
     render() { 
+      const { visible, cancelShowModal } = {...this.props}
         return ( 
             <Modal
             title="查看作业"
-            visible={this.state.visible}
-            onOk={this.handleOk}
+            visible={visible}
+            
             centered={true}
           
             footer={null}
-            onCancel={this.handleCancel}
+            onCancel={cancelShowModal}
           >
         
           </Modal>

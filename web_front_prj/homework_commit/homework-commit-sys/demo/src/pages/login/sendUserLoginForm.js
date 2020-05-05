@@ -1,5 +1,5 @@
 //表单验证
-import cookie from 'react-cookies'
+
 import { message } from 'antd'
 //发送请求
 const sendLoginForm = (that) => {
